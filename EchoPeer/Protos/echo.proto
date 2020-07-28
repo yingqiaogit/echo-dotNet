@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcEchoService";
+
+package echo;
+
+// The echo service definition.
+service Echo {
+  // Sends an echo
+  rpc GetEcho (Said) returns (Repeated);
+}
+
+// The request message containing the user's name.
+message Said {
+  string something = 1;
+}
+
+// The response message containing the greetings.
+message Repeated {
+  string something = 1;
+}
